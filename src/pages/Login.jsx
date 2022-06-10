@@ -30,7 +30,8 @@ const Login = () => {
   };
   useEffect(()=>{
     if(isAuth){
-      navigate(location.state.pathname || "/")
+      console.log(location);
+      navigate(location.pathname || "/")
     }
   },[isAuth])
 

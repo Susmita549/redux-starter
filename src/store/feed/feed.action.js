@@ -10,6 +10,7 @@ export const getFeedsApi = () => (dispatch) => {
   axios
     .get("http://localhost:8080/feeds")
     .then((r) => {
+      // console.log(r)
       dispatch({ type: GET_FEEDS_SUCCESS, payload: r.data });
     })
     .catch(() => {
