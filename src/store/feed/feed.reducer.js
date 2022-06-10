@@ -22,7 +22,7 @@ export const feedReducer = (state=iniState,{type,payload}) => {
                     loading:true,
                     error:false
                 },
-                data:payload
+               
             }
         }
         case GET_FEEDS_SUCCESS :{
@@ -31,8 +31,8 @@ export const feedReducer = (state=iniState,{type,payload}) => {
                     ...state.getFeeds,
                     loading:false,
                     error:false
-                }
-                
+                },
+                data:payload
             }
         }
         case GET_FEEDS_ERROR  :{
